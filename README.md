@@ -15,13 +15,11 @@
 2. Для каждого пикселя выполняется итеративный процесс, где комплексное число заменяется новым значением в зависимости от результатов предыдущих вычислений.
 3. В зависимости от числа итераций определяется цвет пикселя.
 
-## До и после:
+### Результат:
+C:\Users\dayof\.jdks\openjdk-19.0.2\bin>`java C:\Users\dayof\IdeaProjects\JuliaSet\src\main\java\org\fubar\Main.java -d 4096;4096 -c -0.75;0.11 -o C:\Users\dayof\Desktop\JuliaSet\123.png`
 
-### До:
+`Потоки успешно завершились.`
 
-![До](ссылка_на_изображение_до)
+`Изображение сохранено в файл: C:\Users\dayof\Desktop\JuliaSet\123_JuliaSet.png`
 
-### После:
-`java C:\Users\dayof\IdeaProjects\JuliaSet\src\main\java\org\fubar\Main.java -d 4096;4096 -c -0.75;0.11 -o C:\Users\dayof\Desktop\julia\Papowsky.jpg`
-
-![После](ссылка_на_изображение_после)
+<img src="123_JuliaSet.png" width="300">
