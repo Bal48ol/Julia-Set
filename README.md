@@ -15,13 +15,7 @@
 2. Для каждого пикселя выполняется итеративный процесс, где комплексное число заменяется новым значением в зависимости от результатов предыдущих вычислений.
 3. В зависимости от числа итераций определяется цвет пикселя.
 
-## До и после:
-
-### До:
-
-<img src="Papowsky.jpg" width="300">
-
-### После:
+### Результат:
 `java C:\Users\dayof\IdeaProjects\JuliaSet\src\main\java\org\fubar\Main.java -d 668;661 -c -0.75;0.11 -o C:\Users\dayof\Desktop\julia\Papowsky.jpg`
 
 <img src="Papowsky_JuliaSet.jpg" width="300">
