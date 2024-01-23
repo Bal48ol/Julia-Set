@@ -16,6 +16,10 @@
 3. В зависимости от числа итераций определяется цвет пикселя.
 
 ### Результат:
-`java C:\Users\dayof\IdeaProjects\JuliaSet\src\main\java\org\fubar\Main.java -d 668;661 -c -0.75;0.11 -o C:\Users\dayof\Desktop\julia\Papowsky.jpg`
+C:\Users\dayof\.jdks\openjdk-19.0.2\bin>`java C:\Users\dayof\IdeaProjects\JuliaSet\src\main\java\org\fubar\Main.java -d 4096;4096 -c -0.75;0.11 -o C:\Users\dayof\Desktop\JuliaSet\123.png`
 
-<img src="Papowsky_JuliaSet.jpg" width="300">
+`Потоки успешно завершились.`
+
+`Изображение сохранено в файл: C:\Users\dayof\Desktop\JuliaSet\123_JuliaSet.png`
+
+<img src="123_JuliaSet.png" width="300">
