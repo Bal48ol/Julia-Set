@@ -16,7 +16,7 @@ public class Main {
         int height = 512;
         double realPart = -0.75;
         double imaginaryPart = 0.11;
-        String outputFileName = "output.png";
+        String outputFileName = "123.png";
 
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
