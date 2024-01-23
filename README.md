@@ -19,9 +19,9 @@
 
 ### До:
 
-![До](Papowsky.jpg)
+<img src="Papowsky.jpg" width="300">
 
 ### После:
 `java C:\Users\dayof\IdeaProjects\JuliaSet\src\main\java\org\fubar\Main.java -d 668;661 -c -0.75;0.11 -o C:\Users\dayof\Desktop\julia\Papowsky.jpg`
 
-![После](Papowsky_JuliaSet.jpg)
+<img src="Papowsky_JuliaSet.jpg" width="300">
