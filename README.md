@@ -22,6 +22,6 @@
 ![До](Papowsky.jpg)
 
 ### После:
-`java C:\Users\dayof\IdeaProjects\JuliaSet\src\main\java\org\fubar\Main.java -d 4096;4096 -c -0.75;0.11 -o C:\Users\dayof\Desktop\julia\Papowsky.jpg`
+`java C:\Users\dayof\IdeaProjects\JuliaSet\src\main\java\org\fubar\Main.java -d 668;661 -c -0.75;0.11 -o C:\Users\dayof\Desktop\julia\Papowsky.jpg`
 
 ![После](Papowsky_JuliaSet.jpg)
