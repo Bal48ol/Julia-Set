@@ -19,3 +19,6 @@ C:\Users\dayof\.jdks\openjdk-19.0.2\bin>
 `>Изображение сохранено в файл: C:\Users\dayof\Desktop\JuliaSet\123_JuliaSet.png`
 
 <img src="123_JuliaSet.png" width="512" alt="JuliaSet">
+
+### Внимание!
+Перед запуском ознакомиться с файлом `Julia-Set/.idea/encodings.xml`
