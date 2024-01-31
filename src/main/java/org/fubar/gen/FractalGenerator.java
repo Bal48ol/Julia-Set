@@ -22,7 +22,7 @@ public class FractalGenerator {
         }
 
         if (width <= 0 || height <= 0) {
-            System.err.println("Недопустимые параметры для генерации фрактала: Ширина и высота не могут быть <= 0");
+            System.err.println("\nНедопустимые параметры для генерации фрактала: Ширина и высота не могут быть <= 0");
             return;
         }
 
@@ -31,7 +31,7 @@ public class FractalGenerator {
         long startTime = System.currentTimeMillis();
         generateJuliaFractalSingleThread(image, width, height, realPart, imaginaryPart);
         long endTime = System.currentTimeMillis();
-        System.out.println("Время выполнения для одного потока: " + (endTime - startTime) + " мс");
+        System.out.println("\nВремя выполнения для одного потока: " + (endTime - startTime) + " мс");
 
         startTime = System.currentTimeMillis();
         generateJuliaFractalFixedThreadPool(image, width, height, realPart, imaginaryPart);
@@ -52,13 +52,13 @@ public class FractalGenerator {
         if (dotIndex != -1) {
             fileExtension = outputFileName.substring(dotIndex);
         } else {
-            System.err.println("Недопустимый путь для сохранения изображения (отсутствует расширение файла)");
+            System.err.println("\nНедопустимый путь для сохранения изображения (отсутствует расширение файла)");
             return null;
         }
 
         String uniqueOutputFileName = outputFileName.substring(0, dotIndex) + "_" + "JuliaSet" + fileExtension;
         if (!isValidImagePath(uniqueOutputFileName)) {
-            System.err.println("Недопустимый формат для сохранения изображения (используйте .png)");
+            System.err.println("\nНедопустимый формат для сохранения изображения (используйте .png)");
             return null;
         } else {
             return uniqueOutputFileName;

@@ -17,10 +17,10 @@ public class FractalGenTermination {
                 if (!forkJoinPool.awaitTermination(5, TimeUnit.SECONDS)) {
                     forkJoinPool.shutdownNow();
                     if (!forkJoinPool.awaitTermination(5, TimeUnit.SECONDS)) {
-                        System.err.println("Не удалось корректно завершить ForkJoinPool");
+                        System.err.println("\nНе удалось корректно завершить ForkJoinPool");
                     }
                 } else {
-                    System.out.println("Потоки успешно завершились");
+                    System.out.println("\nПотоки успешно завершились");
                 }
             } catch (InterruptedException e) {
                 forkJoinPool.shutdownNow();
@@ -36,10 +36,10 @@ public class FractalGenTermination {
             if (terminated) {
                 System.out.println("Потоки успешно завершились.");
             } else {
-                System.err.println("Истекло время ожидания завершения потоков.");
+                System.err.println("\nИстекло время ожидания завершения потоков.");
             }
         } catch (InterruptedException e) {
-            System.err.println("Произошло прерывание при ожидании завершения потоков.");
+            System.err.println("\nПроизошло прерывание при ожидании завершения потоков.");
         }
     }
 
@@ -47,7 +47,7 @@ public class FractalGenTermination {
         try {
             File output = new File(fileName);
             ImageIO.write(image, "png", output);
-            System.out.println("Изображение сохранено в файл: " + fileName);
+            System.out.println("\nИзображение сохранено в файл: " + fileName);
         } catch (IOException e) {
             System.err.println("Изображение не сохранено в файл: " + e.getMessage());
         }
