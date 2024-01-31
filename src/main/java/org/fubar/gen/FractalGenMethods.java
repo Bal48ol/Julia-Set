@@ -22,7 +22,7 @@ public class FractalGenMethods {
 
     public static void generateJuliaFractalFixedThreadPool(BufferedImage image, int width, int height, double realPart, double imaginaryPart) {
         int availableProcessors = Runtime.getRuntime().availableProcessors();
-        System.out.println("\nДоступные ресурсы процессора: " + availableProcessors);
+        System.out.println("\nР”РѕСЃС‚СѓРїРЅС‹Рµ СЂРµСЃСѓСЂСЃС‹ РїСЂРѕС†РµСЃСЃРѕСЂР°: " + availableProcessors);
         ExecutorService executor = Executors.newFixedThreadPool(availableProcessors);
         for (int y = 0; y < height; y++) {
             final int row = y;

@@ -17,10 +17,10 @@ public class FractalGenTermination {
                 if (!forkJoinPool.awaitTermination(5, TimeUnit.SECONDS)) {
                     forkJoinPool.shutdownNow();
                     if (!forkJoinPool.awaitTermination(5, TimeUnit.SECONDS)) {
-                        System.err.println("\nНе удалось корректно завершить ForkJoinPool");
+                        System.err.println("\nРќРµ СѓРґР°Р»РѕСЃСЊ РєРѕСЂСЂРµРєС‚РЅРѕ Р·Р°РІРµСЂС€РёС‚СЊ ForkJoinPool");
                     }
                 } else {
-                    System.out.println("\nПотоки успешно завершились");
+                    System.out.println("\nРџРѕС‚РѕРєРё СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РёР»РёСЃСЊ");
                 }
             } catch (InterruptedException e) {
                 forkJoinPool.shutdownNow();
@@ -34,12 +34,12 @@ public class FractalGenTermination {
         try {
             boolean terminated = executor.awaitTermination(1, TimeUnit.MINUTES);
             if (terminated) {
-                System.out.println("Потоки успешно завершились.");
+                System.out.println("РџРѕС‚РѕРєРё СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РёР»РёСЃСЊ.");
             } else {
-                System.err.println("\nИстекло время ожидания завершения потоков.");
+                System.err.println("\nРСЃС‚РµРєР»Рѕ РІСЂРµРјСЏ РѕР¶РёРґР°РЅРёСЏ Р·Р°РІРµСЂС€РµРЅРёСЏ РїРѕС‚РѕРєРѕРІ.");
             }
         } catch (InterruptedException e) {
-            System.err.println("\nПроизошло прерывание при ожидании завершения потоков.");
+            System.err.println("\nРџСЂРѕРёР·РѕС€Р»Рѕ РїСЂРµСЂС‹РІР°РЅРёРµ РїСЂРё РѕР¶РёРґР°РЅРёРё Р·Р°РІРµСЂС€РµРЅРёСЏ РїРѕС‚РѕРєРѕРІ.");
         }
     }
 
@@ -47,9 +47,9 @@ public class FractalGenTermination {
         try {
             File output = new File(fileName);
             ImageIO.write(image, "png", output);
-            System.out.println("\nИзображение сохранено в файл: " + fileName);
+            System.out.println("\nРР·РѕР±СЂР°Р¶РµРЅРёРµ СЃРѕС…СЂР°РЅРµРЅРѕ РІ С„Р°Р№Р»: " + fileName);
         } catch (IOException e) {
-            System.err.println("Изображение не сохранено в файл: " + e.getMessage());
+            System.err.println("РР·РѕР±СЂР°Р¶РµРЅРёРµ РЅРµ СЃРѕС…СЂР°РЅРµРЅРѕ РІ С„Р°Р№Р»: " + e.getMessage());
         }
     }
 }

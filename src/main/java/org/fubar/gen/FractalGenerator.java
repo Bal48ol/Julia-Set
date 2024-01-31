@@ -22,7 +22,7 @@ public class FractalGenerator {
         }
 
         if (width <= 0 || height <= 0) {
-            System.err.println("\nÍåäîïóñòèìûå ïàðàìåòðû äëÿ ãåíåðàöèè ôðàêòàëà: Øèðèíà è âûñîòà íå ìîãóò áûòü <= 0");
+            System.err.println("\nÐÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ðµ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ñ‹ Ð´Ð»Ñ Ð³ÐµÐ½ÐµÑ€Ð°Ñ†Ð¸Ð¸ Ñ„Ñ€Ð°ÐºÑ‚Ð°Ð»Ð°: Ð¨Ð¸Ñ€Ð¸Ð½Ð° Ð¸ Ð²Ñ‹ÑÐ¾Ñ‚Ð° Ð½Ðµ Ð¼Ð¾Ð³ÑƒÑ‚ Ð±Ñ‹Ñ‚ÑŒ <= 0");
             return;
         }
 
@@ -31,17 +31,17 @@ public class FractalGenerator {
         long startTime = System.currentTimeMillis();
         generateJuliaFractalSingleThread(image, width, height, realPart, imaginaryPart);
         long endTime = System.currentTimeMillis();
-        System.out.println("\nÂðåìÿ âûïîëíåíèÿ äëÿ îäíîãî ïîòîêà: " + (endTime - startTime) + " ìñ");
+        System.out.println("\nÐ’Ñ€ÐµÐ¼Ñ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ Ð´Ð»Ñ Ð¾Ð´Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ñ‚Ð¾ÐºÐ°: " + (endTime - startTime) + " Ð¼Ñ");
 
         startTime = System.currentTimeMillis();
         generateJuliaFractalFixedThreadPool(image, width, height, realPart, imaginaryPart);
         endTime = System.currentTimeMillis();
-        System.out.println("Âðåìÿ âûïîëíåíèÿ äëÿ fixed ïóëà: " + (endTime - startTime) + " ìñ");
+        System.out.println("Ð’Ñ€ÐµÐ¼Ñ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ Ð´Ð»Ñ fixed Ð¿ÑƒÐ»Ð°: " + (endTime - startTime) + " Ð¼Ñ");
 
         startTime = System.currentTimeMillis();
         generateJuliaFractalForkJoinPool(image, width, height, realPart, imaginaryPart);
         endTime = System.currentTimeMillis();
-        System.out.println("Âðåìÿ âûïîëíåíèÿ äëÿ fork-join ïóëà: " + (endTime - startTime) + " ìñ");
+        System.out.println("Ð’Ñ€ÐµÐ¼Ñ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ Ð´Ð»Ñ fork-join Ð¿ÑƒÐ»Ð°: " + (endTime - startTime) + " Ð¼Ñ");
 
         saveImageToFile(image, uniqueOutputFileName);
     }
@@ -52,13 +52,13 @@ public class FractalGenerator {
         if (dotIndex != -1) {
             fileExtension = outputFileName.substring(dotIndex);
         } else {
-            System.err.println("\nÍåäîïóñòèìûé ïóòü äëÿ ñîõðàíåíèÿ èçîáðàæåíèÿ (îòñóòñòâóåò ðàñøèðåíèå ôàéëà)");
+            System.err.println("\nÐÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ð¹ Ð¿ÑƒÑ‚ÑŒ Ð´Ð»Ñ ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ñ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ (Ð¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ð²ÑƒÐµÑ‚ Ñ€Ð°ÑÑˆÐ¸Ñ€ÐµÐ½Ð¸Ðµ Ñ„Ð°Ð¹Ð»Ð°)");
             return null;
         }
 
         String uniqueOutputFileName = outputFileName.substring(0, dotIndex) + "_" + "JuliaSet" + fileExtension;
         if (!isValidImagePath(uniqueOutputFileName)) {
-            System.err.println("\nÍåäîïóñòèìûé ôîðìàò äëÿ ñîõðàíåíèÿ èçîáðàæåíèÿ (èñïîëüçóéòå .png)");
+            System.err.println("\nÐÐµÐ´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ð¹ Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚ Ð´Ð»Ñ ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ñ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ (Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐ¹Ñ‚Ðµ .png)");
             return null;
         } else {
             return uniqueOutputFileName;
