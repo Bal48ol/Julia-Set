@@ -1,14 +1,13 @@
 package org.fubar;
 
-import org.fubar.gen.FractalGenerator;
-import org.fubar.params.FractalParametersParser;
 import org.fubar.params.dto.FractalParameters;
+
+import static org.fubar.gen.FractalGenerator.generateJuliaFractal;
+import static org.fubar.params.FractalParametersParser.parseArguments;
 
 public class Main {
     public static void main(String[] args) {
-        FractalParametersParser parser = new FractalParametersParser();
-        FractalParameters parameters = parser.parseArguments(args);
-        FractalGenerator generator = new FractalGenerator();
-        generator.generateJuliaFractal(parameters);
+        FractalParameters parameters = parseArguments(args);
+        generateJuliaFractal(parameters);
     }
 }

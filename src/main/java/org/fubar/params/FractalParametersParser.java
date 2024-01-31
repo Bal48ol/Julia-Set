@@ -9,7 +9,7 @@ public class FractalParametersParser {
     private static final double DEFAULT_IMAGINARY_PART = 0.11;
     private static final String DEFAULT_OUTPUT_FILENAME = "123.png";
 
-    public FractalParameters parseArguments(String[] args) {
+    public static FractalParameters parseArguments(String[] args) {
         int defaultWidth = DEFAULT_WIDTH;
         int defaultHeight = DEFAULT_HEIGHT;
         double defaultRealPart = DEFAULT_REAL_PART;
